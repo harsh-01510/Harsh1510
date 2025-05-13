@@ -25,8 +25,8 @@
                 <td><input type="email" name="email" id="email" placeholder="Enter Your Email"></td>
             </tr>
             <tr>
-                <td><label for="mobile-number">Mobile:</label></td>
-                <td><input type="tel" name="mobile-number" id="mobile-number" placeholder="10-digit Mobile Number" pattern="[0-9]{10}"></td>
+                <td><label for="mobile-number" >Mobile:</label></td>
+                <td><input type="tel" name="mobile-number" id="mobile-number" placeholder="10-digit Mobile Number" maxlength="10"></td>
             </tr>
             <tr>
                 <td>Gender:</td>
@@ -56,28 +56,9 @@
                 <td><input type="text" name="state" id="state" placeholder="Enter Your State"></td>
             </tr>
             <tr>
-                <td><label for="qualification">Qualification:</label></td>
-                <td>
-                    <select name="qualification" id="qualification">
-                        <option value="">Select Qualification:</option>
-                        <option value="10TH Pass">10TH Pass</option>
-                        <option value="12TH Pass">12TH Pass</option>
-                        <option value="Graduation">Graduation</option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td><label>Specialization:</label></td>
-                <td>
-                    <input type="checkbox" name="specialization" value="Computer Science"> Computer Science<br>
-                    <input type="checkbox" name="specialization" value="Information Technology"> Information Technology<br>
-                    <input type="checkbox" name="specialization" value="Computer Architecture"> Computer Architecture<br>
-                    <input type="checkbox" name="specialization" value="Tele Communication"> Tele Communication
-                </td>
-            </tr>
             <tr>
                 <td><label for="password">Password:</label></td>
-                <td><input type="password" name="password" id="password" placeholder="Enter Password"></td>
+                <td><input type="password" name="password" id="password" placeholder="Enter Password" maxlength="6"></td>
             </tr>
             <tr>
                 <td colspan="2"><input type="submit" value="Register" class="submit-btn"></td>
