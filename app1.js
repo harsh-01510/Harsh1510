@@ -67,11 +67,7 @@ document.addEventListener("DOMContentLoaded", function() {
             valid = false;
         }
 
-        else if (!/^[0-9]{6}$/.test(areapin.value)) {
-            alert("Please enter a 6-digit area PIN.");
-            areapin.focus();
-            valid = false;
-        }
+       
 
         else if (state.value.trim() === "") {
             alert("Please enter your state.");
