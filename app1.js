@@ -27,24 +27,6 @@ document.addEventListener("DOMContentLoaded", function() {
             valid = false;
         }
 
-    
-        else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
-            alert("Please enter a valid email address.");
-            email.focus();
-            valid = false;
-        }
-
-    
-        else if (!/^[0-9]{10}$/.test(mobile.value)) {
-            alert("Please enter a 10-digit mobile number.");
-            mobile.focus();
-            valid = false;
-        }
-
-        else if (![...gender].some(g => g.checked)) {
-            alert("Please select your gender.");
-            valid = false;
-        }
 
     
         else if (dob.value === "") {
