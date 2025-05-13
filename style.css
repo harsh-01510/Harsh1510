@@ -1,25 +1,81 @@
 body {
-    font-family: sans-serif;
-    text-align: center;
-    padding: 40px;
-    background: #eef;
-  }
-  body {
-background-image: url(https://icon-library.com/images/weather-icon-gif/weather-icon-gif-22.jpg);
-background-repeat: no-repeat;
-background-size: cover;
-background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 20px;
 }
-  input, button {
+
+table {
+    width: 75%;
+    background-color: #ffffff;
+    border-collapse: collapse;
+    margin: auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.form-header {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #d9534f;
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 15px 0;
+    border-bottom: 2px solid #ddd;
+    text-decoration: underline;
+}
+
+td {
+    padding: 15px;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #ddd;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"], input[type="email"], input[type="tel"], input[type="date"], input[type="password"], textarea, select {
+    width: 90%;
     padding: 10px;
-    font-size: 16px;
-    margin: 5px;
-  }
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
 
-  .weather {
-    margin-top: 20px;
-  }
+textarea {
+    resize: vertical;
+    height: 80px;
+}
 
-  .weather img {
-    width: 100px;
-  }
+input[type="checkbox"], input[type="radio"] {
+    margin-right: 10px;
+}
+
+.submit-btn {
+    background-color: #5cb85c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    width: 95%;
+}
+
+.submit-btn:hover {
+    background-color: #4cae4c;
+}
+
+@media (max-width: 768px) {
+    table {
+        width: 95%;
+    }
+    input[type="text"], input[type="email"], input[type="tel"], input[type="date"], input[type="password"], textarea, select {
+        width: 95%;
+    }
+}

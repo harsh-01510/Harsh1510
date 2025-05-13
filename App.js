@@ -1,39 +1,69 @@
-const apiKey = "2e680da7e9a42179a102e21428c9faf6";
+import React, { useState } from "react";
 
+const LoginPage = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
 
-async function getWeather() {
- 
-  const city = document.getElementById("cityInput").value;
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setError("");
 
-  
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    try {
+      const response = await fetch("https://your-api.com/api/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email, password }),
+      });
 
-  try {
-    
-    const response = await fetch(url);
+      if (!response.ok) {
+        throw new Error("Invalid email or password");
+      }
 
-    
-    if (!response.ok) throw new Error("City not found");
+      const data = await response.json();
+      
+      alert("Login successful!");
+      console.log(data);
+    } catch (err) {
+      setError(err.message);
+    } finally {
+      setLoading(false);
+    }
+  };
 
-    
-    const data = await response.json();
+  return (
+    <div style={{ maxWidth: 400, margin: "50px auto", padding: 20 }}>
+      <h2>Login</h2>
+      <form onSubmit={handleLogin}>
+        <div>
+          <label>Email:</label>
+          <input
+            type="email"
+            value={email}
+            required
+            onChange={(e) => setEmail(e.target.value)}
+          />
+        </div>
+        <div style={{ marginTop: 10 }}>
+          <label>Password:</label>
+          <input
+            type="password"
+            value={password}
+            required
+            onChange={(e) => setPassword(e.target.value)}
+          />
+        </div>
+        {error && <p style={{ color: "red" }}>{error}</p>}
+        <button type="submit" disabled={loading} style={{ marginTop: 15 }}>
+          {loading ? "Logging in..." : "Login"}
+        </button>
+      </form>
+    </div>
+  );
+};
 
-    
-    document.getElementById("cityName").textContent = data.name;
-
-   
-    document.getElementById("temp").textContent = `${data.main.temp} °C`;
-
-   
-    document.getElementById("condition").textContent = data.weather[0].main;
-
-   
-   
-    
-    document.getElementById("weatherBox").style.display = "block";
-
-  } catch (error) {
-   
-    alert("Error: " + error.message);
-  }
-}
+export default LoginPage;

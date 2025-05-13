@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="thank_you.html">
+        <table cellpadding="10" cellspacing="0" width="75%">
+            <tr height="30px">
+                <td colspan="7" align="right" class="form-header"> Registration Form</td>
+            </tr>
+            <tr>
+                <td><label for="first-name">First Name:</label></td>
+                <td><input type="text" name="first-name" id="first-name" placeholder="Enter Your First Name"></td>
+            </tr>
+            <tr>
+                <td><label for="last-name">Last Name:</label></td>
+                <td><input type="text" name="last-name" id="last-name" placeholder="Enter Your Last Name"></td>
+            </tr>
+            <tr>
+                <td><label for="email">Email:</label></td>
+                <td><input type="email" name="email" id="email" placeholder="Enter Your Email"></td>
+            </tr>
+            <tr>
+                <td><label for="mobile-number">Mobile:</label></td>
+                <td><input type="tel" name="mobile-number" id="mobile-number" placeholder="10-digit Mobile Number" pattern="[0-9]{10}"></td>
+            </tr>
+            <tr>
+                <td>Gender:</td>
+                <td>
+                    <input type="radio" name="gender" value="Male" id="male"><label for="male"> Male</label>
+                    <input type="radio" name="gender" value="Female" id="female"><label for="female"> Female</label>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="dob">Date Of Birth:</label></td>
+                <td><input type="date" name="dob" id="dob"></td>
+            </tr>
+            <tr>
+                <td><label for="address">Address:</label></td>
+                <td><textarea name="address" id="address" placeholder="Enter Your Address"></textarea></td>
+            </tr>
+            <tr>
+                <td><label for="city">City:</label></td>
+                <td><input type="text" name="city" id="city" placeholder="Enter Your City"></td>
+            </tr>
+            <tr>
+                <td><label for="areapin">Area PIN:</label></td>
+                <td><input type="text" name="areapin" id="areapin" placeholder="Enter Area PIN"></td>
+            </tr>
+            <tr>
+                <td><label for="state">State:</label></td>
+                <td><input type="text" name="state" id="state" placeholder="Enter Your State"></td>
+            </tr>
+            <tr>
+                <td><label for="qualification">Qualification:</label></td>
+                <td>
+                    <select name="qualification" id="qualification">
+                        <option value="">Select Qualification:</option>
+                        <option value="10TH Pass">10TH Pass</option>
+                        <option value="12TH Pass">12TH Pass</option>
+                        <option value="Graduation">Graduation</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Specialization:</label></td>
+                <td>
+                    <input type="checkbox" name="specialization" value="Computer Science"> Computer Science<br>
+                    <input type="checkbox" name="specialization" value="Information Technology"> Information Technology<br>
+                    <input type="checkbox" name="specialization" value="Computer Architecture"> Computer Architecture<br>
+                    <input type="checkbox" name="specialization" value="Tele Communication"> Tele Communication
+                </td>
+            </tr>
+            <tr>
+                <td><label for="password">Password:</label></td>
+                <td><input type="password" name="password" id="password" placeholder="Enter Password"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" value="Register" class="submit-btn"></td>
+            </tr>
+        </table>
+    </form>
+    <script src="app1.js"></script>
+</body>
+</html>
