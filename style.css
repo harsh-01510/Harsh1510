@@ -1,0 +1,25 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+    padding: 40px;
+    background: #eef;
+  }
+  body {
+background-image: url(https://icon-library.com/images/weather-icon-gif/weather-icon-gif-22.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed;
+}
+  input, button {
+    padding: 10px;
+    font-size: 16px;
+    margin: 5px;
+  }
+
+  .weather {
+    margin-top: 20px;
+  }
+
+  .weather img {
+    width: 100px;
+  }
